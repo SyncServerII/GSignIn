@@ -81,6 +81,8 @@ and you can use Google's Sign In library like you normally would.
 
 I am currently unable to access the embedded .bundle that Google provides in their Google Sign In. Specifically, their `GIDSignInButton` when rendered in iOS doesn't have graphic assets. In  [iOSGoogle](https://github/SyncServerII/iOSGoogle.git) I work around this by creating my own button. See `GoogleSignInOutButton` in that package.
 
+See also my writeup on this at https://stackoverflow.com/questions/65469685/using-google-sign-in-for-ios-with-swift-package-manager/65469686#65469686
+
 ## Development problem 1
 
 I was having errors on 12/15/20 when building for simulator; see https://stackoverflow.com/questions/63607158. I had to make some changes to the GSignIn.xcodeproj used for this-- by adding settings into `Excluded Architecture`.
