@@ -111,6 +111,9 @@ https://stackoverflow.com/questions/52421999
 
 The solution: Don't give a directory in your Swift package the name `Resources`. Very odd.
 
+## Development problem 3
+As I wrote up  at https://stackoverflow.com/questions/65469685 on 12/28/20 and 12/29/20, I had been getting linker warnings and errors. That solutions I wrote up on the same SO post on 1/1/21.
+
 # SMGoogleSignIn
 
 (For reference, from  [SMGoogleSignIn](https://github.com/crspybits/SMGoogleSignIn.git)).

@@ -1,0 +1,6 @@
+framework module GSignIn {
+  umbrella header "GSignIn.h"
+
+  export *
+  module * { export * }
+}
