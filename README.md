@@ -8,6 +8,31 @@ It appears the way to achieve this goal is to convert GoogleSignIn to an [XCFram
 
 This effort started its life as [SMGoogleSignIn](https://github.com/crspybits/SMGoogleSignIn.git), which was targeted at Cocoapods. The doc section at the bottom titled `SMGoogleSignIn` gives that history.
 
+# TL;DR
+If you just want to use this XCFramework and skip all the reading, add this target into your Package.swift. 
+
+```
+.binaryTarget(
+    name: "GSignIn",
+    url: "https://url/to/some/remote/xcframework.zip",
+    checksum: "b2b468ca98bcbe7d771726cd2a1ea6f9bee785957af8c9f4c75aa10e5c337a52"
+),
+```
+
+Note that you must be using at least Swift 5.3 in your Package.swift. E.g., have this at the top of the Package.swift:
+
+```
+// swift-tools-version:5.3
+```
+
+# Generating the checksum used above
+
+You need to run the `swift package compute-checksum` command ([see this reference](https://developer.apple.com/documentation/swift_packages/distributing_binary_frameworks_as_swift_packages) from a directory containing a Package.swift file ([see this reference](https://developer.apple.com/forums/thread/655951)). This is why the `FakePackage` directory is present. Generate a zip file with the XCFramework, copy or move it into the FakePackage directory and from the root directoy (containing this README.md) run: 
+
+```
+swift package --package-path FakeExample compute-checksum FakeExample/GSignIn.xcframework.zip
+```
+
 # GSignIn
 
 I have renamed this repo `GSignIn` to distinguish it from `SMGoogleSignIn` (for Cocoapods) and `GoogleSignIn`-- Google's library.
