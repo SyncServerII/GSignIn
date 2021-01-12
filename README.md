@@ -11,6 +11,7 @@ This effort started its life as [SMGoogleSignIn](https://github.com/crspybits/SM
 # TL;DR
 If you just want to use this XCFramework and skip all the reading, add this target into your Package.swift. 
 
+This is for Google Sign In version 5.0.2:
 ```
 .binaryTarget(
     name: "GSignIn",
@@ -27,7 +28,7 @@ Note that you must be using at least Swift 5.3 in your Package.swift. E.g., have
 
 # Generating the checksum used above
 
-You need to run the `swift package compute-checksum` command ([see this reference](https://developer.apple.com/documentation/swift_packages/distributing_binary_frameworks_as_swift_packages) from a directory containing a Package.swift file ([see this reference](https://developer.apple.com/forums/thread/655951)). This is why the `FakePackage` directory is present. Generate a zip file with the XCFramework, copy or move it into the FakePackage directory and from the root directoy (containing this README.md) run: 
+You need to run the `swift package compute-checksum` command ([see this reference](https://developer.apple.com/documentation/swift_packages/distributing_binary_frameworks_as_swift_packages) from a directory containing a Package.swift file ([see this reference](https://developer.apple.com/forums/thread/655951)). This is why the `FakePackage` directory is present. Generate a zip file with the XCFramework, copy or move it into the FakePackage directory and from the root directory (containing this README.md) run: 
 
 ```
 swift package --package-path FakeExample compute-checksum FakeExample/GSignIn.xcframework.zip
