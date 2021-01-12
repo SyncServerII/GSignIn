@@ -14,7 +14,7 @@ If you just want to use this XCFramework and skip all the reading, add this targ
 ```
 .binaryTarget(
     name: "GSignIn",
-    url: "https://github.com/SyncServerII/GSignIn/blob/main/XCFrameworks/GSignIn.xcframework.5.0.2.zip",
+    url: "https://github.com/SyncServerII/GSignIn/raw/main/XCFrameworks/GSignIn-5.0.2.xcframework.zip",
     checksum: "b2b468ca98bcbe7d771726cd2a1ea6f9bee785957af8c9f4c75aa10e5c337a52"
 ),
 ```
